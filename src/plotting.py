@@ -1,8 +1,8 @@
 import os
 import numpy as np
 import pandas as pd
-from ams_paq_utilities import *
-from ams_utilities import *
+from paq_utilities import *
+from utilities import *
 import matplotlib.pyplot as plt
 import seaborn as sns
 import tifffile as tf
