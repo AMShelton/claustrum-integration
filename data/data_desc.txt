@@ -1,0 +1,6 @@
+The data contained within this repo has the following structure and attrributes:
+
+Shelton_etal_2024_EPhtsData.xlsx
+=> Intrinsic electrophysical properties of all whole-cell recorded, confirmed CLA neurons used in analyses for this study, totaling 569 recorded neurons.
+  -> Includes neuron metadata, such as recording date, mouseID, and estimate type/subtype of the recorded neuron. Subtype designations later supported via clustering analysis
+  -> All electrophysiological properties extracted from the single-spike waveform and current-step responses collected in current clamp mode as described in the Materials & Matehods section as well as Toledo-Rodriguez et al., Cereb. Cortex (2004) and Watson et al., bioRXiv (2016)
