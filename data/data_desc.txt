@@ -1,6 +1,33 @@
-The data contained within this repo has the following structure and attrributes:
+The data contained within this repo has the following structure and attributes:
 
-Shelton_etal_2024_EPhtsData.xlsx
+Shelton_etal_2024_EPhysData.xlsx
 => Intrinsic electrophysical properties of all whole-cell recorded, confirmed CLA neurons used in analyses for this study, totaling 569 recorded neurons.
-  -> Includes neuron metadata, such as recording date, mouseID, and estimate type/subtype of the recorded neuron. Subtype designations later supported via clustering analysis
-  -> All electrophysiological properties extracted from the single-spike waveform and current-step responses collected in current clamp mode as described in the Materials & Matehods section as well as Toledo-Rodriguez et al., Cereb. Cortex (2004) and Watson et al., bioRXiv (2016)
+  -> Includes neuron metadata, such as recording date, mouseID, and estimated type/subtype of the recorded neuron. Subtype designations were later supported via clustering analysis using UMAP and k-means.
+  -> All electrophysiological properties extracted from the single-spike waveform and current-step responses collected in current clamp mode using PackIO as described in the Materials & Methods section, as well as Toledo-Rodriguez et al., Cereb. Cortex (2004) and Watson et al., bioRXiv (2016)
+
+Shelton_etal_2024_CLA_Morphology.xlsx
+=> Morphological reconstruction data derived from biocytin-filled CLA neurons post-fixation in 4% paraformaldehyde.
+  -> Includes neuron metadata and extracted morphological properties, where available. Properties that could not be extracted (e.g., axonal properties) are indicated by NaN.
+  -> Reconstructions were performed in Neurolucida 360, and data were extracted using Neurolucida Explorer.
+  -> Morphologies were not collected from all patched neurons and not all morphologies used in the study corresponded to a neuron with electrophysiology that passed quality control.
+
+Shelton_etal_2024_CLA_ResponseLatencies_IntegratingCells.xlsx
+  => The response latencies of CLA neurons that exhibit EPSPs to two different input cortical regions relative to photostimulation onset
+    -> Regions are designated by 2-3 symbol abbreviations that can be interpreted from the Table of Abbreviations in Shelton et al 2024  
+
+Shelton_etal_2024_CLA_ResponseLatencies_Intraclaustral.xlsx
+=> The response latencies of CLA neurons to photostimulation of RSP-projecting CLA neurons, relative to photostimulation onset.
+  -> Neurons directly expressing opsins based on very fast response times and large response magnitudes are indicated (n = 4).
+  -> Neurons expressing the retrograde label (CTB), indicating projection to RSP are designated.
+  -> Magnitude is given as the baseline-corrected integral of the stimulated response (post-pre photostimulation)
+  -> The dorso-ventral position of the patched neuron is given as follows: dorsal (D) if patched dorsally to the RSP-projecting "core" labeled by CTB, core (C) if in the RSP core, and ventral (V) if patched ventrally to the RSP core.
+  -> Given AP positions are relative to Bregma and exclusively in the left hemisphere. 
+
+Shelton_etal_2024_CtxResponse_CLAStim.xlsx
+=> The response latencies of cortical neurons to photostimulation of RSP-projecting CLA neurons, relative to photostimulation onset.
+  -> Layer of patched cortical neurons estimated from low-magnification DIC images.
+  -> Magnitude is given as the baseline-corrected integral of the stimulated response (post-pre photostimulation)
+
+Shelton_etal_2024_Pharmacology.xlsx
+=> Response latencies and amplitudes of the CLA neurons during pharmacological manipulation (TTX + 4AP, TTX + 4AP + DNQX + APV)
+  -> Drugs delivered in the wash with ACSF, see Materials & Mathods
